@@ -59,7 +59,9 @@
     transform: translateX(0px);
   }
   &--large {
-    width: calc(100vw - 20px);
+    @include respondTo('pre-unisonus') {
+      width: 245px;
+    }
     @include respondTo('unisonus') {
       width: 506px;
     }
