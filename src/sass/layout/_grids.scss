@@ -1,0 +1,12 @@
+.grid-footer{
+    display: grid;
+    grid-template-columns: 264px 150px;
+  
+    @include respondTo('diapente') {
+      grid-template-columns: 511px 239px 274px;
+    }
+  
+    @include respondTo('diapason') {
+      grid-template-columns: 641px 320px 338px;
+    }
+  }

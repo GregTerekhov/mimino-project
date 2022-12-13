@@ -1,0 +1,84 @@
+.navigation {
+  @extend %list;
+}
+
+.navigation__item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__department {
+  @extend %link;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.219;
+  letter-spacing: 0.02em;
+  color: getColor('accent');
+  @include transition(color);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: getColor('accent-darker');
+  }
+
+  &.header__navigation-link {
+    @include respondTo('tritonus') {
+      font-size: 16px;
+    }
+  }
+}
+
+.navigation__wrap {
+  @include respondTo('diapente') {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 2px;
+    border: 1px solid mix(transparent, getColor('accent'), 30%);
+    @include transition(border);
+
+    &:hover,
+    &:focus {
+      border: 1px dashed getColor('primary-inversed');
+    }
+  }
+}
+
+.navigation__contact {
+  @extend %link;
+
+  @include respondTo('diapente') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation__number {
+  display: none;
+
+  @include respondTo('diapente') {
+    padding: 11px 8px 12px 0;
+    display: block;
+    font-size: 14px;
+    line-height: 1.219;
+    letter-spacing: 0.02em;
+    color: getColor('primary-inversed');
+    @include transition(color);
+
+    .navigation__wrap:hover &,
+    .navigation__wrap:focus & {
+      color: getColor('accent');
+    }
+  }
+}
+
+.navigation__icon {
+  @extend %icon;
+  color: getColor('accent');
+
+  @include respondTo('diapente') {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}

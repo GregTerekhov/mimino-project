@@ -1,8 +1,5 @@
 .hotel-details {
   position: relative;
-  margin: 0 auto;
-  padding-top: 24px;
-  padding-bottom: 40px;
 
   &__canvas {
     background-position: center;
@@ -12,6 +9,9 @@
 
     max-width: 414px;
     @include backgroundImageRetina(
+      $gradient: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)),
       $page: hero,
       $section: hotel,
       $part: mobile,
@@ -21,6 +21,9 @@
     @include respondTo('diapente') {
       max-width: 1024px;
       @include backgroundImageRetina(
+        $gradient: linear-gradient(
+          rgba(0, 0, 0, 0.76), 
+          rgba(0, 0, 0, 0.76)),
         $page: hero,
         $section: hotel,
         $part: tablet,
@@ -31,6 +34,9 @@
     @include respondTo('diapason') {
       max-width: 1280px;
       @include backgroundImageRetina(
+        $gradient: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)),
         $page: hero,
         $section: hotel,
         $part: desktop,

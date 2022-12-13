@@ -2,42 +2,42 @@
   @extend %list;
   display: flex;
   align-items: center;
-  margin-top: 58px;
 
-  @include respondTo('diapente') {
-    margin-top: 25px;
-  }
+  &--header {
+    gap: 20px;
+    margin-left: auto;
 
-  @include respondTo('diapason') {
-    display: none;
+    @include respondTo('heptachordium maius') {
+      display: none;
+    }
   }
 
   &__link {
-    color: getColor('accent');
+    @extend %link;
+    font-family: $text-font-stack;
+    font-size: 16px;
+    line-height: 1.219;
+    letter-spacing: 0.02em;
+    color: mix(transparent, getColor('accent'), 30%);
+    @include transition(color);
 
     &:hover,
     &:focus,
     &:active {
-      color: getColor('accent-darker');
+      color: getColor('accent');
+    }
+  }
+
+  &__text {
+    @include respondTo('tritonus') {
+      display: none;
+    }
+    @include respondTo('diapente') {
+      display: block;
     }
   }
 
   &__icon {
-    fill: currentColor;
-    display: block;
-  }
-}
-
-.socials-header {
-  display: none;
-  @extend %list;
-  margin-left: auto;
-  @include respondTo('diapason') {
-    display: flex;
-    gap: 20px;
-  }
-  &__icon {
     @extend %icon;
-    color: mix(transparent, getColor('accent'), 30%);
   }
 }

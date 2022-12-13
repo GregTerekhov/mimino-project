@@ -3,11 +3,13 @@
   &__hero {
     padding-top: 181px;
     padding-bottom: 20px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
+    max-width: 414px;
 
     @include respondTo('diapente') {
       padding-top: 188px;
@@ -24,7 +26,7 @@
 
   &__content {
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 20px;
     background-color: #fffdee;
 
     @include respondTo('diapente') {
@@ -34,6 +36,32 @@
 
     @include respondTo('diapason') {
       padding-bottom: 50px;
+    }
+  }
+
+  &__details {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 24px;
+    padding-bottom: 40px;
+
+    @include respondTo('diapente') {
+      padding-top: 48px;
+    }
+  }
+
+  &__booking {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #fffdee;
+
+    @include respondTo('diapente') {
+      padding-top: 64px;
+      padding-bottom: 40px;
+    }
+
+    @include respondTo('diapason') {
+      padding-top: 72px;
     }
   }
 }

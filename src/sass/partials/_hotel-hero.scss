@@ -1,30 +1,29 @@
-.home-hero {
-  max-width: 414px;
+.hotel-hero {
+  position: relative;
+
   @include backgroundImageRetina(
     $page: hero,
-    $section: home,
+    $section: hotel,
     $part: mobile,
     $file: hero-mob,
-    $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+    $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
   );
   @include respondTo('diapente') {
-    max-width: 1024px;
     @include backgroundImageRetina(
       $page: hero,
-      $section: home,
+      $section: hotel,
       $part: tablet,
       $file: hero-tab,
-      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
     );
   }
   @include respondTo('diapason') {
-    max-width: 1280px;
     @include backgroundImageRetina(
       $page: hero,
-      $section: home,
+      $section: hotel,
       $part: desktop,
       $file: hero-desk,
-      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
     );
   }
 
@@ -56,5 +55,14 @@
 
   .hotel-hero__socials {
     gap: 20px;
+    margin-top: 58px;
+
+    @include respondTo('diapente') {
+      margin-top: 25px;
+    }
+  
+    @include respondTo('diapason') {
+      display: none;
+    }
   }
 }

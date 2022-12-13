@@ -25,6 +25,7 @@
 // Міксин виведення розміру кнопки
 @mixin buttonSize(
   $width: null,
+  $max-width: null,
   $padding-top: null,
   $padding-bottom: null,
   $booking-room: false,
@@ -39,6 +40,7 @@
     width: 236px;
   } @else {
     width: $width;
+    max-width: $max-width;
   }
 }
 

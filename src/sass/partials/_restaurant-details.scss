@@ -1,27 +1,47 @@
-$hero-button: true;
+.restaurant-details {
+    position: relative;
+  
+    &__canvas {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+  
+      max-width: 414px;
+      @include backgroundImageRetina(
+        $page: home, 
+        $section: restaurant-details, 
+        $part: mobile, 
+        $file: background-mob, 
+        $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp'
+        );
 
-.section-wrapper {
-  position: relative;
-  z-index: -2;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  max-width: 414px;
-  width: 100%;
-  height: 100%;
-  @include backgroundImageRetina($page: home, $section: restaurant-details, $part: mobile, $file: background-mob, $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
   @include respondTo('diapente') {
      max-width: 1024px;
-    @include backgroundImageRetina($gradient: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), $page: home, $section: restaurant-details, $part: tablet, $file: background-tab, $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(
+        rgba(0, 0, 0, 0.76), 
+        rgba(0, 0, 0, 0.76)), 
+      $page: home, 
+      $section: restaurant-details, 
+      $part: tablet, 
+      $file: background-tab, 
+      $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
   }
   @include respondTo('diapason') {
     max-width: 1280px;
-    @include backgroundImageRetina($gradient: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), $page: home, $section: restaurant-details, $part: desktop, $file: background-desk, $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(
+        rgba(0, 0, 0, 0.65), 
+        rgba(0, 0, 0, 0.65)), 
+      $page: home, 
+      $section: restaurant-details, 
+      $part: desktop, 
+      $file: background-desk, 
+      $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
   }
 }
 
-.restaurant-details {
   &__container {
     position: relative;
   }
@@ -154,7 +174,6 @@ $hero-button: true;
 
   &__button {
     @extend %link;
-    display: inline-block;
     @include buttonSize($section-button:true, $padding-top: 14px, $padding-bottom: 14px);
     @include buttonPlace($transparent-button: true);
   }

@@ -1,5 +1,5 @@
 .location {
-    border: 1px solid getColor('accent');
+    border: 1px solid transparentize($color: getColor('accent'), $amount: 0.3);
     border-radius: 2px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -9,10 +9,10 @@
     align-items: center;
     gap: 10px;
     color: getColor('accent');
-    @include transition(border-color, color);
+    @include transition(border, color);
 
     &:focus, &:hover, &:active {
-      border-color: getColor('primary-inversed');
+      border: 1px dashed getColor('primary-inversed');
       color: getColor('primary-inversed');
     }
   
@@ -43,7 +43,7 @@
   }
   
   .location__icon {
-    fill: currentColor;
+    @extend %icon;
     margin-left: 6px;
   
     @include respondTo('diapente') {

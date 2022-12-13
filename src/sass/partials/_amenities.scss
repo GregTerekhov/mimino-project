@@ -1,15 +1,15 @@
 .amenities {
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   @include respondTo('diapente') {
     padding-top: 48px;
-    padding-bottom: 40px;
   }
+  
   @include respondTo('diapason') {
     padding-bottom: 48px;
   }
 }
+
 .container__decor {
   @include respondTo('diapason') {
     position: relative;
@@ -37,6 +37,7 @@
     }
   }
 }
+
 .container__decor-second {
   @include respondTo('diapason') {
     &::before {
@@ -53,6 +54,7 @@
     }
   }
 }
+
 .amenities-title {
   @extend %marginPaddingReset;
   font-family: $text-times-font;
@@ -66,19 +68,7 @@
     width: 757px;
   }
 }
-.amenities__descr {
-  @extend %marginPaddingReset;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  color: mix(white, getColor('primary'), 48%);
-}
-.amenities__descr_width {
-  @include respondTo('diapente') {
-    width: 400px;
-  }
-}
+
 .amenities__descr_bigest-width {
   @include respondTo('diapente') {
     width: 450px;
@@ -131,9 +121,14 @@
   font-size: 24px;
   line-height: 1.17;
 }
+
 $enable-rounded: true;
 .amenities-button {
-  @include buttonSize($width: 434px, $padding-top: 18px, $padding-bottom: 18px);
+  @include buttonSize(
+    $max-width: 434px,
+    $padding-top: 18px,
+    $padding-bottom: 18px
+  );
   @include buttonReserve;
   @include buttonPlace;
   display: flex;

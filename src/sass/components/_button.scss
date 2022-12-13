@@ -15,6 +15,7 @@
     }
 
     &--booking {
+        @extend %link;
         @include buttonPlace($transparent-button: true);
         @include buttonSize($booking-room: true, $padding-top: 15px, $padding-bottom: 13px);
     }

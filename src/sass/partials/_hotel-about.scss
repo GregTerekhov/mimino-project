@@ -1,17 +1,5 @@
 .hotel-about {
   position: relative;
-  padding-top: 18px;
-  padding-bottom: 20px;
-  background-color: #fffdee;
-
-  @include respondTo('diapente') {
-    padding-top: 120px;
-    padding-bottom: 32px;
-  }
-
-  @include respondTo('diapason') {
-    padding-bottom: 50px;
-  }
 }
 
 .conteiner-hotel-about {
@@ -82,13 +70,6 @@
 
 .hotel-about-article-one__description {
   margin-left: auto;
-
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-
   color: #5f5f5f;
 
   @include respondTo('pre-unisonus') {
@@ -100,11 +81,9 @@
   @include respondTo('unisonus') {
     width: 242px;
     margin-bottom: 28px;
-    font-size: 12px;
   }
 
   @include respondTo('diapente') {
-    font-size: 16px;
     width: 419px;
     margin-bottom: 0px;
   }
@@ -154,11 +133,6 @@
 }
 
 .hotel-about-article-two__description {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
   color: #c79002;
 
   @include respondTo('pre-unisonus') {
@@ -169,13 +143,11 @@
 
   @include respondTo('unisonus') {
     width: 163px;
-    font-size: 12px;
   }
 
   @include respondTo('diapente') {
     width: 312px;
     margin-right: 48px;
-    font-size: 16px;
   }
 
   @include respondTo('diapason') {

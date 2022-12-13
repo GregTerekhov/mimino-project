@@ -9,14 +9,9 @@ ul {
   @extend %marginPaddingReset;
 }
 .room-luxe {
-  padding: 32px 0;
-  background-color: #FFFDEE;
+
   @include respondTo('diapente') {
-    padding: 62px 0;
     position: relative;
-  }
-  @include respondTo('diapason') {
-    padding: 72px 0 48px;
   }
 }
 .room-luxe__wrapper {
@@ -52,7 +47,6 @@ ul {
 }
 .room-luxe__title {
   font-family: 'Times New Roman';
-  font-style: normal;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 24px;
@@ -72,18 +66,10 @@ ul {
   }
 }
 .room-luxe__text {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
   color: #5F5F5F;
   margin-bottom: 32px;
   width: 258px;
   @include respondTo('diapente') {
-    font-size: 16px;
-    line-height: 1.25;
     width: 439px;
     margin-bottom: 174px;
   }

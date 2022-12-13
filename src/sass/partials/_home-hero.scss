@@ -1,36 +1,32 @@
 .home-hero {
-  background-image: linear-gradient(#000000a6, #000000a6),
-    url('../images/hero/home/home-hero.jpg');
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(#000000a3, #000000a3),
-      url('../images/hero/home/home-hero2x.jpg');
-  }
+  position: relative;
+  
+  @include backgroundImageRetina(
+    $page: hero,
+    $section: home,
+    $part: mobile,
+    $file: hero-mob,
+    $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+  );
 
   @include respondTo('diapente') {
-    background-image: linear-gradient(#000000a3, #000000a3),
-      url('../images/hero/home/home-hero-tablet.jpg');
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(#000000a3, #000000a3),
-        url('../images/hero/home/home-hero-tablet2x.jpg');
-    }
+    @include backgroundImageRetina(
+      $page: hero,
+      $section: home,
+      $part: tablet,
+      $file: hero-tab,
+      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+    );
   }
 
   @include respondTo('diapason') {
-    background-image: linear-gradient(#000000a3, #000000a3),
-      url('../images/hero/home/home-hero-desktop.jpg');
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(#000000a3, #000000a3),
-        url('../images/hero/home/home-hero-desktop2x.jpg');
-    }
+    @include backgroundImageRetina(
+      $page: hero,
+      $section: home,
+      $part: desktop,
+      $file: hero-desk,
+      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+    );
   }
 }
 
@@ -40,6 +36,7 @@
   @include respondTo('diapente') {
     margin-bottom: 16px;
   }
+
   @include respondTo('diapason') {
     margin-bottom: 32px;
   }
@@ -70,6 +67,15 @@
 
 .home-hero__socials {
   gap: 20px;
+  margin-top: 58px;
+
+  @include respondTo('diapente') {
+    margin-top: 25px;
+  }
+
+  @include respondTo('diapason') {
+    display: none;
+  }
 }
 
 // .home-hero__address-link:not(:lang(ae)):not(:lang(ar)):not(:lang(arc)):not(

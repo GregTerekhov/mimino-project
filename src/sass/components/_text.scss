@@ -1,12 +1,23 @@
 .text {
-    @extend %marginPaddingReset;
-    font-family: $text-font-stack;
-    font-weight: 600;
+  @extend %marginPaddingReset;
+  font-family: $text-font-stack;
+  line-height: 1.219;
+  letter-spacing: 0.02em;
+
+  &__main {
     font-size: 12px;
-    line-height: 1.219;
-    letter-spacing: 0.02em;
+    font-weight: 600;
 
     @include respondTo('diapente') {
-        font-size: 16px;
-      }
+      font-size: 16px;
+    }
+  }
+
+  &__room {
+    font-weight: 700;
+    font-size: 16px;
+    color: mix(white, getColor('primary'), 48%);
+    max-width: 400px;
+    width: 100%;
+  }
 }
