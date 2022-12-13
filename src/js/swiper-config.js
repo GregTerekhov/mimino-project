@@ -20,6 +20,7 @@ function swiperSlider() {
         breakpoints: {
           //   when window width is >= 320px
           320: {
+            // centeredSlides: true,
             slidesPerView: 1,
             spaceBetween: 16,
           },

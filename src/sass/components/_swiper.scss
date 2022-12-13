@@ -1,6 +1,6 @@
-.container {
-  outline: 1px dotted green;
-}
+// .container {
+//   outline: 1px dotted grey;
+// }
 
 .container-swiper {
   display: flex;
@@ -88,21 +88,32 @@
 }
 
 .swiper-slide-prev {
-  visibility: visible;
   .wrapper-swiper--right & {
     visibility: hidden;
+    @include respondTo('diapente') {
+      visibility: hidden;
+    }
   }
-  @include respondTo('diapente') {
-    visibility: hidden;
+  .wrapper-swiper--left & {
+    visibility: visible;
+    @include respondTo('diapente') {
+      visibility: hidden;
+    }
   }
 }
+
 .swiper-slide-next {
-  visibility: hidden;
+  .wrapper-swiper--left & {
+    visibility: hidden;
+    @include respondTo('diapente') {
+      visibility: visible;
+    }
+  }
   .wrapper-swiper--right & {
     visibility: visible;
-  }
-  @include respondTo('diapente') {
-    visibility: visible;
+    @include respondTo('diapente') {
+      visibility: visible;
+    }
   }
 }
 
@@ -175,7 +186,7 @@
   gap: 32px;
   position: absolute;
   bottom: 8px;
-  left: 16px;
+  left: 30px;
   right: unset;
   @include respondTo('diapente') {
     right: unset;
