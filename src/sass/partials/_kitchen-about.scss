@@ -1,6 +1,7 @@
 .kitchen-about {
   position: relative;
-  z-index: -2;
+  // змінив на 0, бо не робили кнопки слайдеру
+  z-index: 0;
 }
 
 .tagline--kitchen-about {
@@ -51,11 +52,11 @@
 }
 
 .kitchen-about__article {
-margin-top: 12px;
-@include respondTo('diapente') {
-  max-width: 439px;
-  margin-top: 24px;
-}
+  margin-top: 12px;
+  @include respondTo('diapente') {
+    max-width: 439px;
+    margin-top: 24px;
+  }
 }
 
 .kitchen-about__article-img-one {
@@ -99,7 +100,7 @@ margin-top: 12px;
     margin-right: 20px;
     z-index: 2;
   }
-  
+
   @include respondTo('diapente') {
     max-width: 350px;
     margin-right: 48px;
@@ -120,7 +121,6 @@ margin-top: 12px;
   font-family: $text-font-stack;
   color: getColor('accent-darker');
   max-width: 163px;
-
 
   @include respondTo('diapente') {
     font-size: 16px;
