@@ -245,3 +245,7 @@
     bottom: 66px;
   }
 }
+
+.room-hero__arrows {
+  @extend %list;
+}

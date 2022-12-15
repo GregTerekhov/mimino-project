@@ -40,7 +40,7 @@ function swiperSlider() {
   //
   if (heroSliders) {
     heroSliders.forEach(slider => {
-      swiper = new Swiper(slider.querySelector('.mySwiper'), {
+      swiper = new Swiper(slider.querySelector('.swiper-hero'), {
         loop: true,
         navigation: {
           nextEl: '.swiper-hero-button-next',
