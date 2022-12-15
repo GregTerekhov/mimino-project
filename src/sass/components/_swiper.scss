@@ -14,9 +14,7 @@
 .wrapper-mask {
   position: relative;
   overflow: hidden;
-  margin-right: -15px;
   padding: 60px;
-
   .wrapper-swiper--right & {
     margin-right: -15px;
     @include respondTo('pre-unisonus') {
@@ -41,7 +39,6 @@
 
 .swiper {
   overflow: visible;
-
   @include respondTo('pre-unisonus') {
     width: 192px;
   }
@@ -49,7 +46,6 @@
     width: 404px;
     transform: translateX(34px);
   }
-
   @include respondTo('diapente') {
     width: 428px;
     transform: translateX(0px);
@@ -65,7 +61,6 @@
     @include respondTo('unisonus') {
       width: 506px;
     }
-
     @include respondTo('diapente') {
       width: 428px;
     }
@@ -73,29 +68,28 @@
       width: 530px;
     }
   }
-  &-slide {
-    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-    visibility: hidden;
-  }
   &-wrapper {
     @extend %list;
   }
 }
 
-// .swiper-slide.swiper-slide-prev,
-.swiper-slide-active {
+.swiper .swiper-slide {
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  visibility: hidden;
+}
+
+.swiper .swiper-slide-active {
   visibility: visible;
 }
 
 .swiper-slide-prev {
   .wrapper-swiper--right & {
     visibility: hidden;
+    @include respondTo('diapente') {
+      visibility: hidden;
+    }
   }
-  @include respondTo('diapente') {
-    visibility: hidden;
-  }
-
   .wrapper-swiper--left & {
     visibility: visible;
     @include respondTo('diapente') {
@@ -103,14 +97,14 @@
     }
   }
 }
+
 .swiper-slide-next {
   .wrapper-swiper--left & {
     visibility: hidden;
+    @include respondTo('diapente') {
+      visibility: visible;
+    }
   }
-  @include respondTo('diapente') {
-    visibility: visible;
-  }
-
   .wrapper-swiper--right & {
     visibility: visible;
     @include respondTo('diapente') {
@@ -176,10 +170,6 @@
   }
 }
 
-.swiper-button-disabled.swiper-button-prev {
-  opacity: 1;
-}
-
 .swiper__arrows {
   display: flex;
   align-items: center;
@@ -197,7 +187,6 @@
   .wrapper-swiper--right & {
     left: unset;
     right: 32px;
-
     @include respondTo('diapente') {
       right: 56px;
     }

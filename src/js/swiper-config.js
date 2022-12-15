@@ -40,31 +40,12 @@ function swiperSlider() {
   //
   if (heroSliders) {
     heroSliders.forEach(slider => {
-      let arrowLeft = slider.querySelector('.swiper-button-prev');
-      let arrowRight = slider.querySelector('.swiper-button-next');
-      swiper = new Swiper(slider.querySelector('.swiper'), {
-        slidesPerView: auto,
-        //initialSlide: 4,
-        //   spaceBetween: 16,
-        // centeredSlides: true,
-        //freeMode: true,
+      swiper = new Swiper(slider.querySelector('.mySwiper'), {
         loop: true,
         navigation: {
-          nextEl: arrowRight,
-          prevEl: arrowLeft,
+          nextEl: '.swiper-hero-button-next',
+          prevEl: '.swiper-hero-button-prev',
         },
-        //   breakpoints: {
-        //       // when window width is >= 320px
-        //       320: {
-        //           slidesPerView: 2,
-        //           spaceBetween: 16,
-        //       },
-        //       // when window width is >= 480px
-        //       1024: {
-        //           slidesPerView: 2,
-        //           spaceBetween: 40,
-        //       },
-        //   },
       });
     });
   }
