@@ -74,6 +74,16 @@
     svg {
         stroke: #808080;
     }
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
+    & svg:hover,
+    & svg:focus {
+        stroke: getColor('accent-darker');
+    }
 }
 
 .popup__title {
@@ -136,7 +146,7 @@
     letter-spacing: 0.05em;
     color: #808080;
     background-color: inherit;
-    border: 1px solid getColor('accent-darken');
+    border: 1px solid getColor('accent-darker');
     border-radius: 2px;
     outline: none;
 
@@ -152,7 +162,7 @@
     padding-left: 12px;
     color: #808080;
     background-color: inherit;
-    border: 1px solid getColor('accent-darken');
+    border: 1px solid getColor('accent-darker');
     border-radius: 2px;
 
     &-dropdown {
@@ -162,7 +172,7 @@
     &:hover,
     &:focus,
     &:active {
-        border-color: getColor('accent-darken');
+        border-color: getColor('accent-darker');
     }
 }
 
@@ -182,8 +192,8 @@
 .nice-select::after {
     height: 12px;
     width: 12px;
-    border-bottom: 2px solid getColor('accent-darken');
-    border-right: 2px solid getColor('accent-darken');
+    border-bottom: 2px solid getColor('accent-darker');
+    border-right: 2px solid getColor('accent-darker');
 }
 
 .current {
@@ -209,7 +219,7 @@
     font-size: 14px;
     line-height: calc(17/14);
     letter-spacing: 0.02em;
-    color: getColor('accent-darken');
+    color: getColor('accent-darker');
 }
 
 $enable-rounded: false;
@@ -243,7 +253,7 @@ $enable-rounded: false;
     font-size: 16px;
     line-height: calc(19/16);
     letter-spacing: 0.02em;
-    color: getColor('accent-darken');
+    color: getColor('accent-darker');
 
     @include respondTo('diapente') {
         font-size: 16px;
