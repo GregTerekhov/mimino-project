@@ -1,5 +1,4 @@
 .section {
-  
   &__hero {
     padding-top: 181px;
     padding-bottom: 20px;
@@ -47,7 +46,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
+
     max-width: 414px;
 
     @include respondTo('diapente') {

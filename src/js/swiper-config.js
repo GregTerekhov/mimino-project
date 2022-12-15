@@ -42,6 +42,8 @@ function swiperSlider() {
     heroSliders.forEach(slider => {
       swiper = new Swiper(slider.querySelector('.swiper-hero'), {
         loop: true,
+        // slidesPerView: auto,
+        centeredSlides: true,
         navigation: {
           nextEl: '.swiper-hero-button-next',
           prevEl: '.swiper-hero-button-prev',
