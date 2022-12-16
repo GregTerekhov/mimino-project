@@ -214,9 +214,21 @@
 }
 
 .swiper-hero-button-next {
-  right: 0;
+  right: 15px;
+  @include respondTo('diapente') {
+    right: 47px;
+  }
+  @include respondTo('diapason') {
+    right: 85px;
+  }
 }
 
 .swiper-hero-button-prev {
-  left: 0;
+  left: 15px;
+  @include respondTo('diapente') {
+    left: 47px;
+  }
+  @include respondTo('diapason') {
+    left: 85px;
+  }
 }

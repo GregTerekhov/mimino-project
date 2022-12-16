@@ -266,8 +266,6 @@
 .room-hero__button-wrap {
   position: absolute;
   z-index: 10;
-
-  bottom: 40px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -279,6 +277,10 @@
   @include respondTo('diapente') {
     bottom: 64px;
     right: 47px;
+  }
+  @include respondTo('diapason') {
+    bottom: 66px;
+    right: 85px;
   }
 }
 
