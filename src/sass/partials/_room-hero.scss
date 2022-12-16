@@ -1,7 +1,16 @@
-.section--room-hero {
-  max-width: 1280px;
-  height: 700px;
+.room-hero {
+  width: 100%;
+  max-width: 414px;
+  height: 740px;
   padding: 0;
+  // @include respondTo('diapente') {
+  //   max-width: 1024px;
+  //   height: 700px;
+  // }
+  // @include respondTo('diapason') {
+  //   max-width: 1280px;
+  //   height: 700px;
+  // }
 }
 
 .slide-hero {
@@ -26,9 +35,7 @@
 
 .room-hero {
   position: relative;
-  padding-top: 350px;
-  padding-bottom: 14px;
-  max-width: 414px;
+
   margin: 0 auto;
 
   @include respondTo('diapente') {
