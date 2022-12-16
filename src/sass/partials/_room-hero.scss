@@ -206,11 +206,19 @@
   border: none;
 }
 
+.room-hero--container {
+  display: flex;
+  flex-direction: column;
+}
+
 .room-hero__location {
   @include respondTo('tritonus') {
     position: absolute;
     top: 64px;
     right: 15px;
+  }
+  @include respondTo('diapason') {
+    display: none;
   }
 }
 
@@ -220,6 +228,9 @@
   @include respondTo('diapente') {
     display: flex;
     gap: 20px;
+  }
+  @include respondTo('diapason') {
+    display: none;
   }
 }
 
@@ -239,6 +250,10 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+.room-hero__footer {
+  margin-top: auto;
 }
 
 // .room-hero {
