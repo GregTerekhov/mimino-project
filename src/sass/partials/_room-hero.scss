@@ -204,6 +204,11 @@
   background-color: transparentize($color: getColor('primary'), $amount: 0.35);
   fill: getColor('accent');
   border: none;
+  @include transition(fill);
+  &:hover,
+  &:focus {
+    fill: transparentize($color: getColor('accent'), $amount: 0.3);
+  }
 }
 
 .room-hero--container {
@@ -212,11 +217,15 @@
 }
 
 .room-hero__location {
+  position: absolute;
   z-index: 10;
   @include respondTo('tritonus') {
-    position: absolute;
     top: 64px;
     right: 15px;
+  }
+  @include respondTo('diapente') {
+    bottom: 15px;
+    left: 47px;
   }
   @include respondTo('diapason') {
     display: none;
@@ -225,14 +234,15 @@
 
 .room-hero__socials {
   z-index: 10;
+  position: absolute;
   @include respondTo('tritonus') {
-    position: absolute;
     bottom: 15px;
     left: 15px;
+    display: block;
   }
-  display: block;
-
   @include respondTo('diapente') {
+    bottom: 30px;
+    left: 374px;
     display: flex;
     gap: 20px;
   }
@@ -256,11 +266,20 @@
 .room-hero__button-wrap {
   position: absolute;
   z-index: 10;
-  right: 73px;
+
   bottom: 40px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  @include respondTo('tritonus') {
+    bottom: 40px;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+  @include respondTo('diapente') {
+    bottom: 64px;
+    right: 47px;
+  }
 }
 
 .room-hero__footer {
