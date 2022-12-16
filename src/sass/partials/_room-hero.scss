@@ -80,7 +80,8 @@
 }
 
 .slide-hero {
-  padding-top: 483px;
+  padding-top: 471px;
+  padding-bottom: 15px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -214,9 +215,6 @@
 }
 
 .room-hero__socials {
-  position: absolute;
-  left: 15px;
-  bottom: 15px;
   display: block;
 
   @include respondTo('diapente') {
@@ -233,47 +231,21 @@
   }
 }
 
+.room-hero__wrap {
+  display: flex;
+}
+
+.room-hero__button-wrap {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
 // .room-hero {
 
 // .room-hero__footer {
 //   display: flex;
 //   gap: 70px;
-// }
-
-// .room-hero__wrap {
-//   @include respondTo('diapente') {
-//     display: flex;
-//     gap: 40px;
-//   }
-
-//   @include respondTo('diapason') {
-//     display: none;
-//   }
-// }
-
-// .room-hero__location {
-//   @include respondTo('tritonus') {
-//     position: absolute;
-//     top: 64px;
-//     right: 15px;
-//   }
-// }
-
-// .room-hero__socials {
-//   display: block;
-
-//   @include respondTo('diapente') {
-//     display: flex;
-//     gap: 20px;
-//   }
-// }
-
-// .room-hero__socials-item {
-//   @include respondTo('tritonus') {
-//     & + & {
-//       margin-top: 8px;
-//     }
-//   }
 // }
 
 // .room-hero__icon {
