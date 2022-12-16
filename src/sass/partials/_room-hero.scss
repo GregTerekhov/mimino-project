@@ -126,11 +126,69 @@
 }
 
 .three {
-  background-image: url('../images/swiper/room/desktop/room-second-desk.jpg');
+  @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    $page: swiper,
+    $section: room,
+    $part: mobile,
+    $file: room-third-mob,
+    $webp-file: '../images/swiper/room/desktop/room-third-mob.webp'
+  );
+
+  @include respondTo('diapente') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: tablet,
+      $file: room-third-tab,
+      $webp-file: '../images/hero/hotel/desktop/room-third-tab.webp'
+    );
+  }
+
+  @include respondTo('diapason') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: desktop,
+      $file: room-third-desk,
+      $webp-file: '../images/hero/hotel/desktop/room-third-desk.webp'
+    );
+  }
 }
 
 .luxe {
-  background-image: url('../images/swiper/room/desktop/room-third-desk.jpg');
+  @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    $page: swiper,
+    $section: room,
+    $part: mobile,
+    $file: room-second-mob,
+    $webp-file: '../images/swiper/room/desktop/room-second-mob.webp'
+  );
+
+  @include respondTo('diapente') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: tablet,
+      $file: room-second-tab,
+      $webp-file: '../images/hero/hotel/desktop/room-second-tab.webp'
+    );
+  }
+
+  @include respondTo('diapason') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: desktop,
+      $file: room-second-desk,
+      $webp-file: '../images/hero/hotel/desktop/room-second-desk.webp'
+    );
+  }
 }
 
 .room-hero__swiper-button {
