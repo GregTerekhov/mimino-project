@@ -93,32 +93,34 @@
 }
 
 .two {
-  // background-image: url('../images/hero/hotel/desktop/hero-desk.jpg');
   @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     $page: hero,
-    $section: restaurant,
+    $section: hotel,
     $part: mobile,
     $file: hero-mob,
-    $webp-file: '../images/hero/restaurant/desktop/hero-desk.webp'
+    $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
   );
 
   @include respondTo('diapente') {
     @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
       $page: hero,
-      $section: restaurant,
+      $section: hotel,
       $part: tablet,
       $file: hero-tab,
-      $webp-file: '../images/hero/restaurant/desktop/hero-desk.webp'
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
     );
   }
 
   @include respondTo('diapason') {
     @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
       $page: hero,
-      $section: restaurant,
+      $section: hotel,
       $part: desktop,
       $file: hero-desk,
-      $webp-file: '../images/hero/restaurant/desktop/hero-desk.webp'
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
     );
   }
 }
