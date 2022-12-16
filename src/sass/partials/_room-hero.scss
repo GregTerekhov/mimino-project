@@ -7,14 +7,16 @@
   position: relative;
   margin: 0 auto;
 
-  // @include respondTo('diapente') {
-  //   max-width: 1024px;
-  //   height: 700px;
-  // }
-  // @include respondTo('diapason') {
-  //   max-width: 1280px;
-  //   height: 700px;
-  // }
+  @include respondTo('diapente') {
+    max-width: 1024px;
+    height: 720px;
+  }
+  @include respondTo('diapason') {
+    max-width: 1280px;
+  }
+  .room-hero__arrows {
+    @extend %list;
+  }
 }
 
 .slide-hero {
@@ -35,6 +37,20 @@
 
 .luxe {
   background-image: url('../images/swiper/room/desktop/room-third-desk.jpg');
+}
+
+.room-hero__swiper-button {
+  @extend %marginPaddingReset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: transparentize($color: getColor('primary'), $amount: 0.35);
+  fill: getColor('accent');
+  border: none;
 }
 
 // .room-hero {
