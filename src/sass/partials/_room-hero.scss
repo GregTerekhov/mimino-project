@@ -49,26 +49,26 @@
     line-height: 1.14;
     letter-spacing: 0.05em;
     margin-bottom: 14px;
-
     color: getColor('primary-inversed');
-
     @include respondTo('diapente') {
       font-size: 36px;
       margin-bottom: 24px;
     }
-
     &--transform {
       text-transform: uppercase;
     }
   }
 
   .room-hero__descr {
-    font-size: 28px;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
     max-width: 325px;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     color: getColor('primary-inversed');
 
     @include respondTo('diapente') {
+      font-size: 16px;
       max-width: 400px;
       margin-bottom: 24px;
     }
