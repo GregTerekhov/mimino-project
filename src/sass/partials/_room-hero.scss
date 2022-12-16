@@ -213,6 +213,26 @@
   }
 }
 
+.room-hero__socials {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  display: block;
+
+  @include respondTo('diapente') {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.room-hero__socials-item {
+  @include respondTo('tritonus') {
+    & + & {
+      margin-top: 8px;
+    }
+  }
+}
+
 // .room-hero {
 
 // .room-hero__footer {
