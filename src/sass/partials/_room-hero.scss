@@ -212,6 +212,7 @@
 }
 
 .room-hero__location {
+  z-index: 10;
   @include respondTo('tritonus') {
     position: absolute;
     top: 64px;
@@ -223,6 +224,12 @@
 }
 
 .room-hero__socials {
+  z-index: 10;
+  @include respondTo('tritonus') {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
   display: block;
 
   @include respondTo('diapente') {
@@ -247,6 +254,10 @@
 }
 
 .room-hero__button-wrap {
+  position: absolute;
+  z-index: 10;
+  right: 73px;
+  bottom: 40px;
   margin: 0 auto;
   display: flex;
   align-items: center;
