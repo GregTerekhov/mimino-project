@@ -24,7 +24,6 @@
   }
 
   &--right {
-
     @include respondTo('tritonus') {
       margin-left: auto;
       margin-bottom: 32px;
@@ -42,22 +41,28 @@
       margin-right: auto;
     }
   }
-}
 
-.swiper-details__arrows {
-  @include respondTo('tritonus') {
-    margin-right: 25px;
+  & .swiper-slide__image {
+    @include respondTo('tritonus') {
+      opacity: 0.6;
+    }
   }
 
-  & > .swiper-button-next,
-  & > .swiper-button-prev {
-    fill: getColor('primary-inversed');
-    @include transition(fill);
+  .swiper-details__arrows {
+    @include respondTo('tritonus') {
+      margin-right: 25px;
+    }
 
-    &:hover,
-    &:focus,
-    &:active {
-      fill: getColor('accent');
+    & > .swiper-button-next,
+    & > .swiper-button-prev {
+      fill: getColor('primary-inversed');
+      @include transition(fill);
+
+      &:hover,
+      &:focus,
+      &:active {
+        fill: getColor('accent');
+      }
     }
   }
 }
