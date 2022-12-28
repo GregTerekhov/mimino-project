@@ -2,6 +2,9 @@ function swiperSlider() {
   const swiperSliders = document.querySelectorAll('[data-slider="content"]');
   const heroSliders = document.querySelectorAll('[data-slider="hero"]');
   const detailsSliders = document.querySelectorAll('[data-slider="details"]');
+  const detailsSlidersNew = document.querySelectorAll(
+    '[data-slider="details-new"]'
+  );
   if (swiperSliders) {
     swiperSliders.forEach(slider => {
       let arrowLeft = slider.querySelector('.swiper-button-prev');
@@ -63,14 +66,16 @@ function swiperSlider() {
       let arrowLeft = slider.querySelector('.swiper-button-prev');
       let arrowRight = slider.querySelector('.swiper-button-next');
       const swiper = new Swiper(slider.querySelector('.swiper-details'), {
-        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 34,
+        initialSlide: 2,
         loopSlides: 6,
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
-        autoHeight: true,
-        slidesPerView: 'auto',
-        speed: 400,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: true,
         navigation: {
           nextEl: arrowRight,
           prevEl: arrowLeft,
@@ -91,9 +96,31 @@ function swiperSlider() {
             spaceBetween: 34,
           },
           1280: {
-            slidesPerView: 3,
-            spaceBetween: 86,
+            slidesPerView: 'auto',
+            spaceBetween: 34,
           },
+        },
+      });
+    });
+  }
+  if (detailsSlidersNew) {
+    detailsSlidersNew.forEach(slider => {
+      let arrowLeft = slider.querySelector('.swiper-button-prev');
+      let arrowRight = slider.querySelector('.swiper-button-next');
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 34,
+        initialSlide: 2,
+        loopSlides: 6,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
       });
     });
