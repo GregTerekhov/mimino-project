@@ -110,8 +110,8 @@ function swiperSlider() {
       var swiper = new Swiper('.mySwiper', {
         slidesPerView: 'auto',
         spaceBetween: 34,
-        initialSlide: 2,
-        loopSlides: 6,
+        initialSlide: 1,
+        loopSlides: 10,
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
